@@ -6,9 +6,6 @@ import meta.state.PlayState;
 
 using StringTools;
 
-#if (desktop && !html5)
-import sys.FileSystem;
-#end
 
 class CoolUtil
 {
@@ -82,7 +79,7 @@ class CoolUtil
 		//
 		var libraryArray:Array<String> = [];
 		#if android
-		var unfilteredLibrary = HSys.readDirectory('$subDir/$library');
+		var unfilteredLibrary = Tools.readDirectory('$subDir/$library');
 
 		for (folder in unfilteredLibrary)
 		{
